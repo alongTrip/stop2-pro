@@ -21,7 +21,12 @@
         <div class="main">
             <div class="header">
                 <div class="datav-wraper">长 城 证 券 智 能 驾 驶 舱</div>
-                <div class="time-box"></div>
+                <div class="time-box">
+                    <div class="times" style="width:100%;height:30px;text-align:right;line-height:30px;color:#fff;font-size:14px"></div>
+                    <div class="datas" style="width:100%;height:30px;text-align:right;line-height:30px;color:#fff;font-size:13px">
+                        <span class="weeked"></span>
+                    </div>
+                </div>
             </div>
             <div class="content">
                 <div class="cn-left">
@@ -92,6 +97,39 @@
     </div>
 </body>
 <script>
+function fnDate(){
+    var time = document.querySelector('.time-box')
+    var date = new Date()
+    var year=date.getFullYear();//当前年份
+    var month=date.getMonth();//当前月份
+    var data=date.getDate();//天
+    var week = date.getDay()//周
+    var hours=date.getHours();//小时
+    var minute=date.getMinutes();//分
+    var second=date.getSeconds();//
+    var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
+    var weeks = arr[week]
+    // var times = year+"年"+(month+1)+"月"+data+"日"+ weeks;
+    var times = year+"年"+fnW((month+1))+"月"+fnW(data)+"日   "+ weeks;
+    // var datas = hours+":"+minute+":"+ second;
+    var datas = fnW(hours)+":"+fnW(minute)+":"+fnW(second)
+    console.log(times)
+    console.log(datas)
+    var aa = document.querySelector('.times')
+    aa.innerHTML = datas
+    var bb = document.querySelector('.datas')
+    bb.innerHTML = times
+}
+function fnW(str){
+var num;
+str>=10?num=str:num="0"+str;
+return num;
+} 
+setInterval(function(){fnDate()},1000)
+
+
+
+
 //母公司营业收入同比情况
   var myChart = echarts.init(document.getElementById('progress-left'));
   var option = {

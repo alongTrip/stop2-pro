@@ -54,10 +54,10 @@ body,html{
 .time-box{
     width:213px;
     height:58px;
-    border:1px solid #ccc;
     position:absolute;
     right:28px;
     top:23px;
+    padding-right:10px;
 }
 .cn-left{
     width: 358px;
