@@ -9,45 +9,50 @@ ul,ol {
 body,html{
     width: 100%;
     height:100%;
-    background-image: url("https://datav.oss-cn-hangzhou.aliyuncs.com/uploads/images/f86b2ac1cac415bb226e7810f54f7dd5.jpg"); 
+    background-image: url("https://datav.oss-cn-hangzhou.aliyuncs.com/uploads/images/f86b2ac1cac415bb226e7810f54f7dd5.jpg");
     background-size:100% 100%;
     overflow: auto;
 }
 #wrap{
-    width: 100%;
-    height:789px;
+    width: 1400px;
+    height: 789px;
+    position: absolute;
+}
+.content:after{
+    content: '';
+    display: block;
+    clear: both;
 }
 .main{
-    width: 1400px; 
-    /* width:87.5%; */
-    height: 788px; 
+    width: 1400px;
+    height: 788px;
     background: rgba(0, 32, 45, 0.45);
     margin:0 auto;
 }
-.content{  
+.content{
     position: relative;
 }
 .header{
-    width:100%; 
-    height: 80px; 
-    background-image: url("https://datav.oss-cn-hangzhou.aliyuncs.com/uploads/images/0a65428621ef59ccb130accb7d4eb489.png"); 
-    background-repeat: no-repeat; 
+    width:100%;
+    height: 80px;
+    background-image: url("https://datav.oss-cn-hangzhou.aliyuncs.com/uploads/images/0a65428621ef59ccb130accb7d4eb489.png");
+    background-repeat: no-repeat;
     background-size: 100% 100%;
     position: relative;
 }
 .datav-wraper{
-    width: 645px; 
+    width: 645px;
     /* width:46.07%; */
-    height: 70px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    color: rgb(255, 255, 255); 
-    font-weight: bolder; 
-    font-family: "Microsoft Yahei", Arial, sans-serif; 
-    font-size: 29px; 
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-family: "Microsoft Yahei", Arial, sans-serif;
+    font-size: 29px;
     text-overflow: ellipsis;
-    white-space: nowrap; 
+    white-space: nowrap;
     overflow: hidden;
     margin:0 auto;
 }
@@ -62,16 +67,17 @@ body,html{
 .cn-left{
     width: 358px;
     /* width:25.58%; */
-    height: 510px;
+    height: 523px;
     padding-left:25px;
     float:left;
     margin-right:0;
     position: relative;
+    /* padding-top:100px; */
 }
 #progress-left{
     width: 365px;
     /* width:100%; */
-    height: 450px;
+    height: 359px;
     border: none;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 0px;
@@ -90,7 +96,7 @@ body,html{
 .en-title-span{
     display: inline-block;
     transform: scale(0.8);
-    position:absolute;    
+    position:absolute;
 }
 .cn-center{
     width: 589px;
@@ -127,7 +133,7 @@ body,html{
 }
 .nav{
     width:999px;
-    height:190px;
+    height:177px;
     background: rgba(255, 255, 255, 0.03);
     float:left;
     margin-left:25px;
