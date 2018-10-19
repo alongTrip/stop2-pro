@@ -532,8 +532,10 @@ window.onload = function () {
     };
     nChart.setOption(option);
 //佣金收入分布  区域颜色图
+var arr = ['北京','上海','天津','重庆','广东','河北','山西','辽宁','吉林','黑龙江','江苏','浙江','安徽','福建','江西','山东','河南','湖北','湖南','海南','四川','贵州','云南','陕西','甘肃','内蒙古','广西']
     function randomValue() {
-        return Math.round(Math.random()*1000);
+        return Math.round(Math.random()*30);
+        // Math.floor(Math.random() * (max - min) + min)
     }
     function refresh(){
     option = {
@@ -546,11 +548,11 @@ window.onload = function () {
               x: 'left',
               y: 'bottom',
               splitList: [
-                {start: 1000, color: '#C75A4A'},
-                {start: 600, end: 1000,color: '#C99653'},
-                {start: 200, end: 600,color: '#AEB369'},
-                {start: 10, end: 200,color: '#73B691'},
-                {start: 0, end: 10,color: '#53C6D3'},
+                {start: 4000, color: '#C75A4A'},
+                {start: 3000, end: 4000,color: '#C99653'},
+                {start: 2000, end: 3000,color: '#AEB369'},
+                {start: 1000, end: 2000,color: '#73B691'},
+                {start: 0, end: 1000,color: '#53C6D3'},
               ],
               inRange: {
                 color: ['#778899']
@@ -615,7 +617,17 @@ window.onload = function () {
                     borderWidth: 0,
                     shadowColor: 'rgba(0, 0, 0, 0.5)'
                 }
-            }
+            },
+            // dispatchAction({
+            //     type: 'geoSelect',
+            //     // 可选，系列 index，可以是一个数组指定多个系列
+            //     // 可选，系列名称，可以是一个数组指定多个系列
+            //     seriesName: ['北京','上海','天津','重庆','广东'],
+            //     // 数据的 index，如果不指定也可以通过 name 属性根据名称指定数据
+            //     // dataIndex: number,
+            //     // 可选，数据名称，在有 dataIndex 的时候忽略
+            //     name: string
+            // })
         },
         series : [
             {
@@ -644,40 +656,39 @@ window.onload = function () {
                     },
                 },
                 data:[
-                    {name: '北京', value: randomValue()},
-                    {name: '天津', value: randomValue()},
-                    {name: '上海', value: randomValue()},
-                    {name: '重庆', value: randomValue()},
-                    {name: '河北', value: randomValue()},
-                    {name: '河南', value: randomValue()},
-                    {name: '云南', value: randomValue()},
-                    {name: '辽宁', value: randomValue()},
-                    {name: '黑龙江', value: randomValue()},
-                    {name: '湖南', value: randomValue()},
-                    {name: '安徽', value: randomValue()},
-                    {name: '山东', value: randomValue()},
-            
-                    {name: '江苏', value: randomValue()},
-                    {name: '浙江', value: randomValue()},
-                    {name: '江西', value: randomValue()},
-                    {name: '湖北', value: randomValue()},
-                    {name: '广西', value: randomValue()},
-                    {name: '甘肃', value: randomValue()},
-                    {name: '山西', value: randomValue()},
-                    {name: '内蒙古', value: randomValue()},
-                    {name: '陕西', value: randomValue()},
-                    {name: '吉林', value: randomValue()},
-                    {name: '福建', value: randomValue()},
-                    {name: '贵州', value: randomValue()},
-                    {name: '广东', value: randomValue()},
-                    {name: '青海', value: randomValue()},
-                   
-                    {name: '四川', value: randomValue()},
-                   
-                    {name: '海南', value: randomValue()},
-                    {name: '台湾', value: randomValue()},
-                    {name: '香港', value: randomValue()},
-                    {name: '澳门', value: randomValue()},
+                    {name: '北京', value: 4594.730784 },
+                    {name: '天津', value: 35.770926},
+                    {name: '上海', value: 1570.620579},
+                    {name: '重庆', value: 1474.953973},
+                    {name: '河北', value: 433.444297},
+                    {name: '河南', value: 646.6282483},
+                    {name: '云南', value: 1046.380364},
+                    {name: '辽宁', value: 1936.106962},
+                    {name: '黑龙江', value: 73.354688},
+                    {name: '湖南', value: 1026.959545},
+                    {name: '安徽', value: 360.2924968},
+                    {name: '山东', value: 1343.395963},
+                    {name: '江苏', value: 2752.23661},
+                    {name: '浙江', value: 3630.057804},
+                    {name: '江西', value: 963.1307133},
+                    {name: '湖北', value: 2614.312957},
+                    {name: '广西', value: 1009.028248},
+                    {name: '甘肃', value: 42.816101},
+                    {name: '山西', value: 146.3208133},
+                    {name: '内蒙古', value: 173.3565988},
+                    {name: '陕西', value: 873.5180778},
+                    {name: '吉林', value: 96.61214},
+                    {name: '福建', value: 895.6569768},
+                    {name: '贵州', value: 199.765794},
+                    {name: '广东', value: 7401.97582},
+                    {name: '四川', value: 1060.069675},
+                    {name: '海南', value: 614.3891579},
+                    // {name: '台湾', value: },
+                    // {name: '香港', value: },
+                    // {name: '澳门', value: },
+                    // {name: '西藏', value: },
+                    // {name: '新疆', value: },
+                    // {name: '青海', value: }
                 ]
             }
         ]
@@ -685,6 +696,10 @@ window.onload = function () {
        chart.setOption(option)
     }
     var chart= echarts.init(document.getElementById("center-map"))
+    chart.dispatchAction({
+            type: 'mouseover',
+            seriesName: ['云南'],
+        })
     refresh()
     var timer = setInterval(function(){
         refresh()
