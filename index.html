@@ -44,10 +44,12 @@
                     <p class="en-title"><span class="en-title-span" style="left:7px;">Business income of the company</span></p>
                     <div id="progress-left" style="width:358px;height:350px;"></div>
                 </div>
-                <div class="cn-center">
+                <div class="cn-center" style="position:relative;">
                     <h3 class="title" >佣金收入分布</h3>
                     <p class="en-title"><span class="en-title-span" style="left:2px;">Commission income distribution</span></p>
                     <div id="center-map" style="width: 620px;height: 450px;"></div>
+                    <div class="headquarters">经纪业务总部<span class="headquartersSum"> 28,148 </span>万元</div>
+                    <div class="filiale">前海分公司<span class="filialeSum"> 4,977 </span>万元</div>
                 </div>
                 <div class="cn-right">
                     <h3 class="title">客户资产分布</h3>
@@ -544,15 +546,14 @@ window.onload = function () {
               x: 'left',
               y: 'bottom',
               splitList: [
-                {start: 1500,end:1500},
-                {start: 900, end: 1500},
-                {start: 310, end: 1000},
-                {start: 200, end: 300},
-                {start: 10, end: 200,color: 'rgb(182, 187, 106)'},
-                {start: 0, end: 10}
+                {start: 900, end: 1500,color: '#C75A4A'},
+                {start: 500, end: 1000,color: '#C99653'},
+                {start: 200, end: 500,color: '#AEB369'},
+                {start: 10, end: 200,color: '#736691'},
+                {start: 0, end: 10,color: '#53C6D3'}
               ],
               inRange: {
-                color: ['rgb(208, 106, 77)','rgb(53, 189, 208)']
+                color: ['#778899']
               },
               left:'right',
               textStyle:{
@@ -656,7 +657,7 @@ window.onload = function () {
                     {name: '湖南', value: randomValue()},
                     {name: '安徽', value: randomValue()},
                     {name: '山东', value: randomValue()},
-                    {name: '新疆', value: randomValue()},
+                    {name: '新疆', value: ''},
                     {name: '江苏', value: randomValue()},
                     {name: '浙江', value: randomValue()},
                     {name: '江西', value: randomValue()},
@@ -671,9 +672,9 @@ window.onload = function () {
                     {name: '贵州', value: randomValue()},
                     {name: '广东', value: randomValue()},
                     {name: '青海', value: randomValue()},
-                    {name: '西藏', value: randomValue()},
+                    {name: '西藏', value: ''},
                     {name: '四川', value: randomValue()},
-                    {name: '宁夏', value: randomValue()},
+                    {name: '宁夏', value: ''},
                     {name: '海南', value: randomValue()},
                     {name: '台湾', value: randomValue()},
                     {name: '香港', value: randomValue()},

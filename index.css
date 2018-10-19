@@ -154,6 +154,28 @@ body,html{
     float:left;
     position:relative;
 }
+.headquarters,.filiale{
+    position:absolute;
+    padding-left:20px;
+    font-size:12px;
+    color:#CECFD2;
+}
+.headquarters{   
+    bottom:40px;   
+}
+.filiale{
+    bottom:5px;
+}
+.headquartersSum,.filialeSum{
+    font-size:20px;
+    font-weight:bold;   
+}
+.headquartersSum{
+    color:#3CB9C8;
+}
+.filialeSum{
+    color:#C75A4A;
+}
 #center-map{
     width: 610px;
     height: 450px;
